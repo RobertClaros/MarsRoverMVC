@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rover Result</title>
+    <!-- Agrega la referencia a Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container  mx-auto col-md-3">
+    <h1 class="mt-4">Rover Result</h1>
+    <div class="mt-4">
+        <p><strong>Result:</strong> Position: <span th:text="${positionX + ',' + positionY}"></span> Direction: <span th:text="${direction}"></span></p>
+        <p><strong>Final Position:</strong> X: <span th:text="${positionX}"></span>, Y: <span th:text="${positionY}"></span></p>
+        <p><strong>Final Direction:</strong> <span th:text="${direction}"></span></p>
+        <p><strong>Obstacle 1:</strong> X: <span th:text="${obstacleX1}"></span>, Y: <span th:text="${obstacleY1}"></span></p>
+        <p><strong>Obstacle 2:</strong> X: <span th:text="${obstacleX2}"></span>, Y: <span th:text="${obstacleY2}"></span></p>
+        <p><strong>Max X:</strong> <span th:text="${maxX}"></span></p>
+        <p><strong>Max Y:</strong> <span th:text="${maxY}"></span></p>
+        <p><strong>Commands:</strong> <span th:text="${commands}"></span></p>
+    </div>
+    <a href="/rover/start" class="btn btn-primary mt-4">Start Again</a>
+</div>
+<!-- Agrega la referencia a Bootstrap JS y Popper.js (necesario para algunos componentes de Bootstrap) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

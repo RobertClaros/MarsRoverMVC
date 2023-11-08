@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mars Rover Form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container mx-auto col-md-3">
+    <h1 class="mt-4 text-center">Mars Rover Control</h1>
+    <form action="/rover/start" method="post">
+        <div class="mb-3">
+            <label for="maxX" class="form-label">Max X:</label>
+            <input type="number" class="form-control" id="maxX" name="maxX" required>
+        </div>
+        <div class="mb-3">
+            <label for "maxY" class="form-label">Max Y:</label>
+            <input type="number" class="form-control" id="maxY" name="maxY" required>
+        </div>
+        <div class="mb-3">
+            <label for="commands" class="form-label">Commands:</label>
+            <input type="text" class="form-control" id="commands" name="commands" required>
+        </div>
+        <button type="submit" class="btn btn-primary">Start Rover</button>
+    </form>
+</div>
+</body>
+</html>
